@@ -7,13 +7,11 @@ class WindyAssets extends AssetBundle
 {
     public function init()
     {
-        $this->setSourcePath(__DIR__ . '/assets');
+        $this->sourcePath = __DIR__ . '/assets';
 
-        $this->js = [
-            'vendor/leaflet/leaflet.js',
-            'https://api4.windy.com/assets/libBoot.js',
-        ];
+        $this->js[] = 'vendor/leaflet/leaflet.js';
+        $this->js[] = 'https://api4.windy.com/assets/libBoot.js';
 
-        $this->setupAssets('css', ['css/windy'],'widget-windy');
+        $this->css[] = 'css/windy.css';
     }
 }
