@@ -7,13 +7,6 @@ class WindyAssets extends AssetBundle
 {
     public function init()
     {
-        
-        
-        parent::init();
-    }
-
-    public function init()
-    {
         $this->setSourcePath(__DIR__ . '/assets');
 
         $this->js = [
