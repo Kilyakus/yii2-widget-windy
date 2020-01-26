@@ -84,7 +84,7 @@ class Windy extends Widget
 
 					for(var i in disabledEvents) {
 						if(disabledEvents[i] == true){
-							console.log(map[i]);
+							// console.log(map[i]);
 							map[i].disable();
 						}
 					}
@@ -92,33 +92,18 @@ class Windy extends Widget
 
 					const windMetric = overlays.wind.metric;
 
-					// 'kt' .. actually selected metric for wind overlay
-					// Read only value! Do not modify.
-
 					overlays.wind.listMetrics();
 					// ['kt', 'bft', 'm/s', 'km/h', 'mph'] .. available metrics
-
 					overlays.wind.setMetric('m/s');
 
-
-
-
-					// const models = store.get('availProducts')
-
-					// $('.weather li').on('click',function(){
-
-					// 	store.set('availProducts', 'nems')
-					// 	alert(store.get('availProducts'))
-					// })
 
 					map.on('click',latLon => {
 
 						const latlng = latLon.latlng;
-						
+
 						return picker.open({ lat: latlng.lat, lon: latlng.lng });
 
 					})
-
 
 					picker.on('pickerOpened', latLon => {
 						// picker has been opened at latLon coords
