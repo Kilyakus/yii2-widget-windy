@@ -106,7 +106,6 @@ class Windy extends Widget
 					})
 
 					picker.on('pickerOpened', latLon => {
-						// picker has been opened at latLon coords
 						// console.log(latLon);
 
 						const { lat, lon, values, overlay } = picker.getParams();
